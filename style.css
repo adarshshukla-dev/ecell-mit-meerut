@@ -330,3 +330,85 @@ p {
     font-size: 32px;
   }
 }
+
+/* --------------------
+   ABOUT SECTION
+-------------------- */
+.about-section {
+  background: #ffffff;
+}
+
+.about-hero {
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.about-hero h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.about-hero p {
+  font-size: 17px;
+}
+
+.about-buttons {
+  margin-top: 30px;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: 0 auto 80px;
+  text-align: left;
+}
+
+.about-content h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.about-content p {
+  margin-bottom: 18px;
+}
+
+/* WHY JOIN */
+.why-join {
+  margin-bottom: 80px;
+}
+
+.why-join h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* PROBLEMS */
+.problems-section {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.problem-card {
+  background: #f1f5f9;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.problem-card h4 {
+  margin-bottom: 10px;
+}
+
+.problem-card h5 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.problem-card ul {
+  padding-left: 20px;
+}
+
+.problem-card li {
+  margin-bottom: 8px;
+}
+
