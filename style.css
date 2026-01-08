@@ -716,3 +716,104 @@ p {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =========================
+   AGRI START UP TODAY PAGE
+========================= */
+.agri-startup {
+  padding: 80px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.page-header h2 {
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: #0b1c2d;
+}
+
+.page-header p {
+  font-size: 16px;
+  color: #4b5563;
+  max-width: 720px;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.agri-content {
+  max-width: 900px;
+  margin: auto 0 60px;
+  text-align: left;
+}
+
+.agri-content h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.agri-content p {
+  margin-bottom: 14px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* BENEFITS GRID */
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+  margin-bottom: 60px;
+}
+
+.benefit-card {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 7px 18px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.benefit-card h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+  color: #0b1c2d;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* CTA */
+.agri-cta {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.agri-cta h3 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.agri-cta p {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.agri-cta .btn {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
