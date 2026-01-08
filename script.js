@@ -77,3 +77,16 @@ revealOnScroll();
 
 /* =========================
    5. NEWS
+   // About section scroll reveal
+const aboutEls = document.querySelectorAll(".reveal");
+function revealOnScroll2() {
+  aboutEls.forEach(el => {
+    const topPos = el.getBoundingClientRect().top;
+    if (topPos < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+}
+window.addEventListener("scroll", revealOnScroll2);
+revealOnScroll2();
+
