@@ -1,109 +1,195 @@
+/* Custom Variables for easy branding */
 :root {
-  --primary-color: #0056b3;
-  --secondary-color: #00d2ff;
-  --dark-bg: #0a0f1a;
-  --text-main: #333;
-  --glass-white: rgba(255, 255, 255, 0.95);
+  --primary: #2563eb;
+  --secondary: #3b82f6;
+  --dark: #0f172a;
+  --light: #f8fafc;
+  --accent: #00d2ff;
+  --glass: rgba(255, 255, 255, 0.1);
 }
 
-/* 1. Global Polish */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+}
+
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  color: var(--text-main);
-  background-color: #f4f7fa;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* 2. Modern Navbar */
+/* NAVBAR - Sticky & Glass Effect */
 .navbar {
-  height: 80px;
-  background: var(--glass-white);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,0.05);
   display: flex;
-  padding: 0 10%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 10%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
   position: sticky;
   top: 0;
   z-index: 1000;
-  justify-content: space-between;
-  align-items: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
+  font-size: 1.5rem;
   font-weight: 800;
-  font-size: 1.6rem;
-  color: var(--primary-color);
-  letter-spacing: -1px;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-/* 3. Hero Section Transformation */
-.hero-wrapper {
-  height: 90vh;
+.navbar nav a {
+  text-decoration: none;
+  color: var(--dark);
+  margin-left: 20px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: var(--primary);
+}
+
+/* HERO SLIDER - Full Screen & Animations */
+.slider {
   position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
   overflow: hidden;
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+.slide {
+  position: absolute;
   text-align: center;
-  color: white;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease;
+  transform: translateY(20px);
+  padding: 0 20px;
 }
 
-.text-gradient {
-  background: linear-gradient(to right, #ffffff, var(--secondary-color));
+.slide.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide h1 {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(to right, #fff, var(--accent));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.badge {
-  background: rgba(255,255,255,0.1);
-  padding: 8px 20px;
-  border-radius: 30px;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  border: 1px solid rgba(255,255,255,0.2);
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: var(--primary);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  margin: 10px;
+  transition: 0.3s;
+  font-weight: 600;
+  border: 2px solid var(--primary);
 }
 
-/* 4. Modernizing Cards (The 'Boxy' look fix) */
+.btn.outline {
+  background: transparent;
+  border: 2px solid white;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+}
+
+/* CARDS - Modern Grid */
+.section {
+  padding: 80px 10%;
+}
+
+.center { text-align: center; margin-bottom: 40px; }
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
 .card {
-  background: #ffffff;
-  border: none;
-  border-radius: 24px;
-  padding: 40px 30px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: 0.4s;
+  border-bottom: 4px solid transparent;
 }
 
 .card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 60px rgba(0, 86, 179, 0.1);
+  transform: translateY(-10px);
+  border-bottom: 4px solid var(--primary);
 }
 
-/* 5. Impact Grid with Glass Effect */
+.number {
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgba(37, 99, 235, 0.1);
+  display: block;
+}
+
+/* DARK SECTION */
+.dark {
+  background: var(--dark);
+  color: white;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
 .impact-box {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.impact-box h3 {
-  color: var(--secondary-color);
-  margin-bottom: 15px;
+/* FOOTER */
+.site-footer {
+  background: #070b14;
+  color: #94a3b8;
+  padding: 60px 10% 20px;
 }
 
-/* 6. Newsletter with subtle shadow */
-.newsletter-form {
-  display: flex;
-  gap: 10px;
-  background: white;
-  padding: 8px;
-  border-radius: 12px;
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
 }
+
+.footer-col h3, .footer-col h4 { color: white; margin-bottom: 20px; }
+.footer-col ul { list-style: none; }
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col a { color: #94a3b8; text-decoration: none; transition: 0.3s; }
+.footer-col a:hover { color: var(--accent); }
 
 .newsletter-form input {
+  padding: 10px;
+  border-radius: 5px;
   border: none;
-  padding: 12px;
-  flex: 1;
-  outline: none;
+  width: 100%;
+  margin-bottom: 10px;
 }
