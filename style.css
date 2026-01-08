@@ -219,13 +219,96 @@ p {
 /* --------------------
    FOOTER
 -------------------- */
-footer {
+/* --------------------
+   FOOTER
+-------------------- */
+.site-footer {
   background: #0b1c2d;
   color: #d1d5db;
-  text-align: center;
-  padding: 25px 15px;
+  padding: 60px 40px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-col h3,
+.footer-col h4 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-col p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-col ul {
+  list-style: none;
+}
+
+.footer-col ul li {
+  margin-bottom: 10px;
   font-size: 14px;
 }
+
+.footer-col ul li a {
+  color: #d1d5db;
+  text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+  color: #ff9800;
+}
+
+/* Newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+.newsletter-form button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #ff9800;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background: #e68900;
+}
+
+/* Bottom */
+.footer-bottom {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #9ca3af;
+  border-top: 1px solid #1f2937;
+  padding-top: 15px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 50px 25px 20px;
+  }
+}
+
 
 /* --------------------
    RESPONSIVE
