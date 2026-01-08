@@ -1,76 +1,249 @@
+/* --------------------
+   GLOBAL STYLES
+-------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
 }
 
-body { background: #f9f9f9; color: #222; }
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #1f2937;
+  line-height: 1.6;
+}
 
-/* NAVBAR */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  color: #0b1c2d;
+}
+
+p {
+  color: #4b5563;
+}
+
+/* --------------------
+   NAVBAR
+-------------------- */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 40px;
+  align-items: center;
+  padding: 14px 48px;
   background: #0b1c2d;
 }
-.navbar a, .logo { color: #fff; text-decoration: none; margin-left: 15px; }
 
-/* SLIDER */
+.navbar .logo {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.navbar nav a {
+  color: #e5e7eb;
+  margin-left: 22px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.navbar nav a:hover {
+  color: #ff9800;
+}
+
+/* --------------------
+   HERO / SLIDER
+-------------------- */
 .slider {
-  height: 80vh;
-  background: linear-gradient(to right, #0b1c2d, #163a5f);
-  color: #fff;
+  min-height: 80vh;
+  background: linear-gradient(135deg, #0b1c2d, #143b63);
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  padding: 40px 20px;
 }
 
-.slide { display: none; max-width: 700px; }
-.slide.active { display: block; }
+.slide {
+  display: none;
+  max-width: 820px;
+}
 
-.buttons { margin-top: 20px; }
+.slide.active {
+  display: block;
+}
+
+.slide h1 {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.slide p {
+  font-size: 18px;
+  color: #d1d5db;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 28px;
+}
+
 .btn {
-  background: #ff9800;
-  padding: 10px 20px;
-  color: #fff;
-  margin: 5px;
   display: inline-block;
+  padding: 12px 26px;
+  margin: 6px;
+  border-radius: 6px;
+  background: #ff9800;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
 }
+
+.btn:hover {
+  background: #e68900;
+}
+
 .btn.outline {
   background: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #ffffff;
 }
 
-/* SECTIONS */
+.btn.outline:hover {
+  background: #ffffff;
+  color: #0b1c2d;
+}
+
+/* --------------------
+   SECTIONS
+-------------------- */
 .section {
-  padding: 70px 40px;
+  padding: 80px 60px;
   text-align: center;
 }
-.section.dark {
-  background: #0b1c2d;
-  color: #fff;
+
+.section.light {
+  background: #f1f5f9;
 }
 
+.section.dark {
+  background: #0b1c2d;
+}
+
+.section.dark h2,
+.section.dark h3,
+.section.dark p {
+  color: #ffffff;
+}
+
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  max-width: 820px;
+  margin: 0 auto 50px;
+  font-size: 16px;
+}
+
+/* --------------------
+   CARDS (COMMON)
+-------------------- */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 20px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
 }
 
 .card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 6px;
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
 }
-.section.dark .card { background: #162b44; }
 
-/* FOOTER */
+.card h3,
+.card h4 {
+  margin-bottom: 10px;
+}
+
+.section.dark .card {
+  background: #162b44;
+  color: #e5e7eb;
+}
+
+/* --------------------
+   NUMBERS (GOALS)
+-------------------- */
+.number {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #ff9800;
+  margin-bottom: 8px;
+}
+
+/* --------------------
+   IMPACT SECTION
+-------------------- */
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.impact-box {
+  background: #162b44;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.impact-box h3 {
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.impact-box ul {
+  padding-left: 18px;
+}
+
+.impact-box li {
+  margin-bottom: 10px;
+  color: #d1d5db;
+}
+
+/* --------------------
+   FOOTER
+-------------------- */
 footer {
   background: #0b1c2d;
-  color: #fff;
-  padding: 20px;
+  color: #d1d5db;
   text-align: center;
+  padding: 25px 15px;
+  font-size: 14px;
+}
+
+/* --------------------
+   RESPONSIVE
+-------------------- */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+
+  .navbar nav {
+    margin-top: 10px;
+  }
+
+  .section {
+    padding: 60px 25px;
+  }
+
+  .slide h1 {
+    font-size: 32px;
+  }
 }
