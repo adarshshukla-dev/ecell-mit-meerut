@@ -586,3 +586,133 @@ p {
     font-size: 30px;
   }
 }
+
+/* =====================
+   CONTACT SECTION
+===================== */
+.contact-section {
+  padding: 90px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.contact-header h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  max-width: 750px;
+  margin: auto;
+  font-size: 16px;
+  color: #555;
+}
+
+/* GRID */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 60px auto 0;
+  align-items: start;
+  text-align: left;
+}
+
+/* CONTACT INFO */
+.contact-info h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #555;
+}
+
+.contact-info a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 14px;
+  color: #2563eb;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #1d4ed8;
+}
+
+/* MAP */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* CONTACT FORM */
+.contact-form h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.contact-form button {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #1d4ed8;
+}
+
+/* REVEAL */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
